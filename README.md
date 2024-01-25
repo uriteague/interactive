@@ -18,8 +18,5 @@
  ,-\ `-.' /.'  /
 '---`----'----'</pre>
 
-
-
-  <p style="color: rgba(0, 0, 0, 0.5); text-align: justify;">There was &nbsp;no&nbsp; set rules of using the Kufic script; the only common feature is the <b>angular</b>, <b>linear</b> shapes of the characters. Due to the lack of standardization of early Kufic, the script differs widely between regions, ranging from very square and rigid forms to flowery and decorative ones</p>
 </body>
 </html>
