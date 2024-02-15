@@ -1,0 +1,3413 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AMBIENT</title>
+    <style>
+        body {
+            background-color: rgb(189, 181, 213);
+            animation-name: backgroundColorFade;
+            animation-duration: 30s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes backgroundColorFade {
+            0% {
+                background-color: rgb(189, 181, 213);
+            }
+            2% {
+                background-color: rgb(245, 245, 220);
+            }
+            20% {
+                background-color: rgb(189, 181, 213);
+            }
+            28% {
+                background-color: rgb(225, 236, 66);
+            }
+            59% {
+                background-color: rgb(74, 4, 4);
+            }
+            88% {
+                background-color: rgb(189, 181, 213);
+            }
+            97% {
+                background-color: rgb(225, 236, 66);
+            }
+            100% {
+                background-color: rgb(189, 181, 213);
+            }
+        }
+
+        @keyframes cloverColorFade {
+            0% {
+                background-color: rgb(238, 241, 215, 0.8);
+            }
+            17% {
+                background-color: rgb(81, 91, 114, 0.8);
+            }
+            29% {
+                background-color: rgb(231, 81, 27, 0.8);
+            }
+            60% {
+                background-color: rgb(195, 206, 201, 0.8);
+            }
+            74% {
+                background-color: rgb(195, 255, 123, 0.8);
+            }
+            88% {
+                background-color: rgb(173, 149, 168, 0.8);
+            }            
+            100% {
+                background-color: rgb(238, 241, 215, 0.8);
+            }
+        }
+
+        div.clover {
+            display: inline-block;
+            position: sticky;
+            margin-left: 55px;
+            transition: transform 1s linear, background-color 0.5s;
+            height: 55px;
+            animation-name: cloverColorFade;
+            animation-duration: 18s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+        }
+
+        .clover span {
+            width: 30px;
+            height: 30px;
+            background-color: inherit;
+            position: absolute;
+        }
+
+        .t_left {
+            border-radius: 50% 50% 0 50%;
+            left: -30px;
+            top: 0px;
+        }
+
+        .t_right {
+            border-radius: 50% 50% 50% 0%;
+            right: -30px;
+            top: 0px;
+        }
+
+        .b_left {
+            border-radius: 50% 0% 50% 50%;
+            left: -30px;
+            top: 30px;
+        }
+
+        .b_right {
+            border-radius: 0% 50% 50% 50%;
+            right: -30px;
+            top: 30px;
+        }
+
+        @keyframes rotate-clover {
+            from {
+                transform: rotateY(0deg);
+            }
+
+            to {
+                transform: rotateY(180deg);
+            }
+        }
+
+        .rotate {
+            animation: rotate-clover 1s linear forwards;
+        }
+
+        .container {
+            position: absolute;
+            top: -10px;
+            left: -40px;
+            width: 110vw;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+<div class="clover" onmouseover="toggleAnimation(this)">
+    <span class="t_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="t_right" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_left" onmouseover="toggleAnimation(this)"></span>
+    <span class="b_right" onmouseover="toggleAnimation(this)"></span>
+</div>
+</div>
+<script>
+    function toggleAnimation(element) {
+        element.classList.toggle('rotate');
+        const cloverSpans = element.querySelectorAll('span');
+        const clovers = element.querySelectorAll('.clover');
+    }
+    
+</script>
+</body>
+</html>
