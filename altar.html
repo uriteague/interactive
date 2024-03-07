@@ -59,15 +59,13 @@
 		}
 
 		div.l {
+			display: flex;
 			margin: 0.7vw;
 			position: relative;
 			background-color: rgb(225, 236, 66);
 			border-radius: 50% 50% 50% 50%;
-			text-align: justify-all;
-			text-justify:inter-character;
-			text-overflow: ;
-			text-size-adjust: ;
-			text-rendering: ;
+			justify-content: center;
+			align-items: center;
 		}
 
 			div.l:hover {
@@ -132,11 +130,6 @@
 				grid-column: 7 / 8;
 			}
 
-		p {
-			font-family: cardinalFruit, serif;
-			font-
-		}
-
 		img.candle {
 			grid-row: 4 / 6;
 			grid-column: 4 / 6;
@@ -156,6 +149,34 @@
 				right: 10vw;
 			}
 
+		p {
+			text-align: center;
+			font-style: oblique;
+			font-family: 'Arial Narrow';
+			font-size: 2.8vw;
+			letter-spacing: -0.15vw;
+			text-rendering: optimizeSpeed;
+		}
+
+			p.title {
+				font-size: 10vh;
+				writing-mode: vertical-rl;
+				color: #171414;
+				position: relative;
+				left: -8vh;
+
+			}
+
+		a {
+			color: maroon;
+			text-decoration: none;
+		}
+
+			a:hover {
+				color: #e1ec42;
+			}
+
+
 		@media screen and (max-width: 600px) {
 
 			img.candle {
@@ -171,6 +192,11 @@
 				display: none;
 			}
 
+			p.title {
+				font-size: 8vw;
+				left: -2vw;
+			}
+
 		}
 
 
@@ -178,6 +204,7 @@
 </head>
 
 <body>
+<p class="title">WEBANGELS</p>
 <div class="container">
 <div class="altar1"> </div>
 <div class="altar2"> </div>
@@ -185,27 +212,22 @@
 <img class="candle" src="images/candle.gif" alt="A flickering candle">
 <img class="candle" id="candle2" src="images/candle.gif" alt="A flickering candle">
 <img class="candle" id="candle3" src="images/candle.gif" alt="A flickering candle">
-<div class="l" id="l1"><p></p>
+<div class="l" id="l1"><a href="benevolentSpirits/benevolentSpirits.html"><p>BENEVOLENT<br>SPIRITS</p></a>
 </div>
-<div class="l" id="l2">
-	
+<div class="l" id="l2"><a href="debbieDecker/debbieDecker.html"><p>GHOST<br>FINDER<br>DEB</p></a>
 </div>
-<div class="l" id="l3">
-	
+<div class="l" id="l3"><a href="orbdogsdotcom/orbdogsdotcom.html"><p>ORB DOGS<br>DOT COM</p></a>
 </div>
-<div class="l" id="l4">
-	
+<div class="l" id="l4"><a href="orbmanuk/orbmanuk.html"><p>ORB MAN UK</p></a>
 </div>
 <div class="l" id="l5">
 	
 </div>
-<div class="l" id="l6">
-	
+<div class="l" id="l6"><a href="godEnteredMyBody/godEnteredMyBody.html"><p>GOD<br>ENTERED MY<br>BODY</p></a>
 </div>
-<div class="l" id="l7">
-	
+<div class="l" id="l7"><a href="cjdeadrisen/cjdeadrisen.html"><p>CJ DEAD RISEN</p></a>
 </div>
-<div class="l" id="l8">
+<div class="l" id="l8"><a href="karlHansWelz/karlHansWelz.html"><p>KARL HANS WELZ</p></a>
 	
 </div>
 <div class="l" id="l9">
