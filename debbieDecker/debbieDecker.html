@@ -65,7 +65,7 @@
 			width: 30vw;
 			background-color:rgb( 225, 236, 66, 0.7);
 		}
-
+		
 		.divhome {
 			display: flex;
 			position: fixed;
@@ -73,16 +73,17 @@
 			width: 7vw;
 			padding: 0.3vw;
 			margin: 0.7vw 0.5vw;
+			background-color:rgb( 225, 236, 66, 0.7);
 			font-style: oblique;
-			background-color:rgb( 234, 224, 221, 0.5);
+			justify-content: right;
 		}
 
 		.redBox {
 			margin: 0vw 0vw;
 			display: ;
-			border: 2px solid red;
-			width: 20vw;
-			height: 10vw;
+			border: 1px solid red;
+			width: 22vw;
+			height: 11vw;
 			position: fixed;
 			top: 35vw;
 			left: 50vw;
@@ -91,12 +92,24 @@
 		.redBox1 {
 			margin: 0vw 0vw;
 			display: ;
-			border: 2px solid red;
+			border: 1px solid red;
 			width: 7vw;
 			height: 22vw;
 			position: fixed;
-			top: 20vw;
+			top: 40vh;
 			left: 65vw;
+			z-axis: 5;
+		}
+
+		.redBox2 {
+			margin: 0vw 0vw;
+			display: ;
+			border: 1px solid red;
+			width: 9vw;
+			height: 7vh;
+			position: fixed;
+			top: 9vh;
+			left: 8vw;
 			z-axis: 5;
 		}
 
@@ -181,12 +194,23 @@
 			.p1 {
 				font-size: 3vw;
 			}
+
+			.redBox1 {
+				top: 78vh;
+				left: 81vw;
+			}
+
+			.redBox2 {
+				top:33vh;
+				left: 10vw;
+			}
 		}
 		
 	</style>
 </head>
 
 <body>
+
 <div class="container">
 <div class="div2"><a href="https://www.flickr.com/photos/ghostmagnet/5042441496/in/datetaken/" target="_blank"><img src="images/webangels_orbs_debbie-decker.jpg"></a></div>
 <div class=redBox draggable=true></div>
@@ -204,8 +228,10 @@
 <div class="div2"><a href="https://www.flickr.com/photos/ghostmagnet/2811728238/in/datetaken/" target="_blank"><img src="images/12.jpg"></a></div>
 <div class="div2"><a href="https://www.flickr.com/photos/ghostmagnet/10803840703/in/datetaken/" target="_blank"><img src="images/13.jpg"></a></div>
 </div>
+
 <div class="div1"><h1><a href="https://www.flickr.com/people/ghostmagnet/" target="_blank">GHOSTFINDER DEB</a></h1></div>
 <div class="divhome"><p><a href="../altar.html">HOME</a></p></div>
 <div class=redBox1 draggable=true></div>
+<div class=redBox2 draggable=true></div>
 </body>
 <html>
